@@ -2,10 +2,22 @@ package org.roman.neurals;
 
 import java.util.Arrays;
 
+/**
+ * Class that represents a neural network.
+*/
+
 public class NeuralNetwork {
-	private NeuronLayer[] neurons;
-	private SummingFunction fn;
 	
+	/**
+	 * The neuron layers.
+	*/
+	
+	private NeuronLayer[] neurons;
+	
+	/** The summing function for this network. */
+	
+	private SummingFunction fn;
+		
 	public NeuralNetwork(SummingFunction fn, NeuronLayer[] layers) {
 		this.fn = fn;
 		neurons = layers;
@@ -22,10 +34,17 @@ public class NeuralNetwork {
 	public NeuronLayer[] layers() {
 		return neurons;
 	}
-	
+	/**
+	 * Calculates the output for given InputLayer.
+	*/
 	public double calc(InputLayer in) {
 		return calc(in.get());
 	}
+	
+	/**
+	 * Calculates the output for given double array.
+	 * Used in calc(InputLayer).
+	*/
 	
 	public double calc(double[] in) {
 		double[] currentResult = in;
@@ -35,10 +54,19 @@ public class NeuralNetwork {
 		return fn.sum(currentResult);
 	}
 	
+	/**
+	 * Trains all neural network one time.
+	*/
+	
 	public void train() {
 		for (NeuronLayer nl : neurons)
 			nl.train();
 	}
+	
+	/**
+	 * Trains the network all needed times to get the result.
+	 * Next methods are doing the same.
+	*/
 	
 	public void fullTrain(int[][] data, double[][] expected) {
 		for (int i = 0; i < data.length; i++) {
@@ -66,6 +94,10 @@ public class NeuralNetwork {
 	public void fullTrain(double data[], double expected) {
 		while (calc(data)<expected||calc(data)<-expected) train();
 	}
+	
+	/**
+	 * Creates a String for this object based on neuron layers.
+	*/
 
 	public String toString() {
 		String fromLayers = Arrays.toString(neurons);
