@@ -2,6 +2,10 @@ package org.roman.neurals;
 
 import java.util.Random;
 
+/**
+ * InputLayer with random data.
+*/
+
 public class RandomDataInputLayer extends InputLayer {
 	public RandomDataInputLayer(int len) {
 		super(getData(len));
