@@ -11,7 +11,7 @@ public class Range {
      * @param start The start of count.
      * @param end The end of count.
      * @param step The step.
-     * @returns The array.
+     * @return The array.
     */
 
     public static double[] range(double start, double end, double step) {

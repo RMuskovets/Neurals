@@ -1,11 +1,13 @@
 package org.roman.neurals;
 
+import java.io.Serializable;
+
 /**
  * The input for a NeuralNetwork.
  * @author Roman Myskovets'
 */
 
-public class InputLayer {
+public class InputLayer implements Serializable {
 	
 	/**
 	 * The actual input for neural network.

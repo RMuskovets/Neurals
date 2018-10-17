@@ -1,6 +1,8 @@
 package org.roman.neurals;
 
-public class Neuron {
+import java.io.Serializable;
+
+public class Neuron implements Serializable {
 	private double weight;
 	
 	public static double LEARNING_RATE = 0.17;

@@ -1,12 +1,13 @@
 package org.roman.neurals;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  * Class that represents a neural network.
 */
 
-public class NeuralNetwork {
+public class NeuralNetwork implements Serializable {
 	
 	/**
 	 * The neuron layers.

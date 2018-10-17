@@ -1,8 +1,9 @@
 package org.roman.neurals;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class NeuronLayer {
+public class NeuronLayer implements Serializable {
 	private int neuronCount;
 	private Neuron[] neurons;
 	
