@@ -3,9 +3,10 @@ package org.roman.neurals;
 import java.io.Serializable;
 import java.util.Arrays;
 
+@Deprecated
 public class NeuronLayer implements Serializable {
-	private int neuronCount;
-	private Neuron[] neurons;
+	protected int neuronCount;
+	protected Neuron[] neurons;
 	
 	public NeuronLayer(int nc, double allWeight) {
 		neuronCount = nc;

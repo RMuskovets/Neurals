@@ -2,6 +2,7 @@ package org.roman.neurals;
 
 import java.io.Serializable;
 
+@Deprecated
 public class Neuron implements Serializable {
 	private double weight;
 	

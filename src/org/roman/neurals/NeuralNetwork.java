@@ -7,6 +7,7 @@ import java.util.Arrays;
  * Class that represents a neural network.
 */
 
+@Deprecated
 public class NeuralNetwork implements Serializable {
 	
 	/**
